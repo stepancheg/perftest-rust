@@ -33,9 +33,9 @@ fn main() {
 
         let mut steps = 0;
         while (now_us() - start < 1000000) {
-            let iter = 500000;
+            let iter = 100000;
             let mut i = 0;
-            while i < steps {
+            while i < iter {
                 chan1.send(i as int);
                 port2.recv();
                 i += 1;
