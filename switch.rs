@@ -7,7 +7,7 @@ use std::io;
 use extra::time;
 
 fn to_us(ts: &time::Timespec) -> u64 {
-    ts.sec * 1000000 as u64 + ((ts.nsec / 1000) as u64)
+    (ts.sec * 1000000) as u64 + ((ts.nsec / 1000) as u64)
 }
 
 fn now_us() -> u64 {
